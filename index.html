@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet" />
+        <title>8 bulan</title>
+        <style>
+          * {
+            font-family: "Italianno", cursive;
+          }
+          /* Custom text scaling for very small screens */
+          @media (max-width: 320px) {
+            .responsive-text {
+              font-size: 1.5rem; /* 24px */
+              line-height: 2rem; /* 32px */
+            }
+            .responsive-subtext {
+              font-size: 0.75rem; /* 12px */
+              line-height: 1rem; /* 16px */
+            }
+          }
+          /* Style untuk select dropdown */
+          .custom-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1em;
+          }
+        </style>
+      </head>
+    <body class="min-h-screen flex items-center justify-center p-4 w-full h-full min-h-[600px] relative overflow-hidden bg-gradient-to-b from-[#feb1bc] to-[#ff78b4] rounded-3xl">
+        <div class="flex flex-col justify-center items-center w-full max-w-[90%] mx-auto my-8 md:my-16 overflow-hidden gap-4 md:gap-6 px-4 py-6 rounded-[36px] bg-white">
+          <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative overflow-hidden gap-2.5 p-3">
+            <img src="assets/cute2.gif" alt="gif" class="max-w-full h-auto">
+          </div>
+          <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative overflow-hidden gap-2.5 p-3">
+            <p class="responsive-text flex-grow-0 flex-shrink-0 text-sm lg:text-5xl text-center text-black">
+              Berapa bulan Qisqis dan Imi sudah bersama?????
+            </p>
+          </div>
+          <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-full max-w-[360px] relative overflow-hidden gap-2.5 p-2.5 rounded-[36px] bg-white border border-black">
+            <select id="monthDropdown" class="custom-select w-full bg-transparent border-none focus:ring-0 text-center responsive-subtext text-xs xs:text-sm md:text-base text-black/75">
+              <option value="" disabled selected>Pilih jumlah bulan...</option>
+              <option value="1">1 Bulan</option>
+              <option value="2">2 Bulan</option>
+              <option value="3">3 Bulan</option>
+              <option value="4">4 Bulan</option>
+              <option value="5">5 Bulan</option>
+              <option value="6">6 Bulan</option>
+              <option value="7">7 Bulan</option>
+              <option value="8">8 Bulan</option>
+              <option value="9">9 Bulan</option>
+              <option value="10">10 Bulan</option>
+              <option value="11">11 Bulan</option>
+              <option value="12">12 Bulan</option>
+            </select>
+          </div>
+          <button id="requestBtn" class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[124px] relative overflow-hidden gap-2.5 p-3 rounded-3xl bg-[#98182b] cursor-pointer hover:opacity-90">
+            <p class="responsive-subtext flex-grow-0 flex-shrink-0 text-xs xs:text-sm md:text-base text-left text-white">Request</p>
+          </button>
+        </div>
+
+        <script>
+          document.getElementById('requestBtn').addEventListener('click', function() {
+            const selectedMonth = document.getElementById('monthDropdown').value;
+            
+            if (!selectedMonth) {
+              alert('Silakan pilih jumlah bulan terlebih dahulu!');
+              return;
+            }
+            
+            if (selectedMonth === '8') {
+              window.location.href = 'anniv.html';
+            } else {
+              alert('Bukan yaaaa! Coba lagi ya!');
+            }
+          });
+        </script>
+    </body>
+</html>
